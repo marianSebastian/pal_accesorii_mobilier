@@ -1,1 +1,1 @@
-# pal_accesorii_mobilier.github.io
+# pal_accesorii_mobilier
