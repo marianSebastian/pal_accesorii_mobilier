@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OttO srl | Descriere produs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            margin: 0 auto;
+            padding: 0 auto
+        }
+
+        #flip {
+            padding: 0;
+            text-align: center;
+            width: 300px;
+            background-color: seashell;
+            border: solid 1px #c3c3c3;
+            margin: 10px 10px 20px 60px;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }       
+        /* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+   
+}
+
+/* The expanding image container */
+.container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: rgb(232, 24, 24);
+    font-size: 35px;
+    cursor: pointer;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+    </style>
+</head>
+
+<div class="w3-container w3-card">
+
+    <div class="w3-panel w3-leftbar w3-sand w3-xxlarge w3-serif">
+        
+            
+        <center> <span class="branding w3-bar-item w3-mobile "><img src="images/logo.png" class="w3-padding" alt="Logo-ul meu" style="height:80px; width:160px"></span></center>
+        <div class="w3-card" id="flip" style="font-size: 16px; float: right; margin-top:10px; max-width: 95%; height: auto;">
+            <p class="w3-tooltip ">Orar magazin:<br> <span class="w3-text "><em>Luni - Vineri: 08.00 - 17.00<br>Sambata: 08.00 - 12.00<br>Duminica , ne odihnim!</em></span></p>
+        </div>
+        <div class="w3-card" id="flip" style="font-size: 16px; float: left; margin-left:5px; margin-bottom: 16px; max-width: 95%;
+        height: auto;">
+            <p class="w3-tooltip ">Punct de lucru:<br> <span class="w3-text "><em>Str. Aristide Demetriade<br>Nr. 1-5(langa Fan Curier)</em></span></p>
+        </div>
+        <div class="w3-left-align" style="font-size:19px; text-shadow:1px 1px 0 red; margin: auto; max-width: 100%; height: auto;">
+            <center>
+                <p><i>"Depozit de pal si accesorii mobilier. "</i></p>
+            </center>
+
+        </div>
+    </div>
+    <span class="w3-right w3-mobile " style="padding-bottom: 15px">
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hover-red ">Acasa</a>
+    <a href="produse.html" class="w3-bar-item w3-button w3-mobile w3-hover-red ">Produsele noastre</a>
+    <a href="descarcari.html" class="w3-bar-item w3-button w3-mobile w3-hover-red ">Descarcari</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-hover-red ">Contact</a>
+    </span>
+</div>
+<!--
+    <center>
+        <h2>Slide in Overlay from the Top</h2>
+        <p>Hover over the image to see the effect.</p>
+    </center>
+
+    <center>
+        <div class="container">
+            <img src="images/accesorii/balamale/blum/155_blumotion.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Balama 155 grade, blallalalalalalla</div>
+            </div>
+    </center>-->
+
+    <div style="text-align:center">
+        <h2>Detalii produs</h2>
+        <p>Click pe imagini:</p>
+      </div>
+            <!-- The four columns -->
+      <div class="row">
+        <div class="column">
+          <img src="images/accesorii/balamale/blum/155_blumotion.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="images/accesorii/balamale/blum/155_blumotion.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="images/accesorii/balamale/altele/suport_tipon.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="images/accesorii/balamale/altele/tipon.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+        </div>
+      </div>
+      
+      <div class="container"  class="w3-card" class="center">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" class="center">
+        <div id="imgtext"></div>
+      </div>
+      
+      <script>
+      function myFunction(images) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+          expandImg.src = images.src;
+          
+          expandImg.parentElement.style.display = "block";
+      }
+      </script>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-64 ">
+
+
+
+
+
+    </footer>
+
+
+</body>
+
+</html>

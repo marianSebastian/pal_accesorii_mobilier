@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weebe-ul meu!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            margin: 0 auto;
+            padding: 0 auto
+        }
+
+        #flip {
+            padding: 0;
+            text-align: center;
+            width: 260px;
+            background-color: seashell;
+            border: solid 1px #c3c3c3;
+            margin: 10px 10px 20px 60px;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Center website */
+
+        .main {
+            max-width: 1000px;
+            margin-top: 80px;
+        }
+
+        .row {
+            margin: 10px -16px;
+        }
+
+        /* Add padding BETWEEN each column */
+
+        .row,
+        .row>.column {
+            padding: 5px;
+        }
+
+        /* Create three equal columns that floats next to each other */
+
+        .column {
+            float: left;
+            width: 33.3%;
+            display: none;
+            /* Hide all elements by default */
+        }
+
+        /* Clear floats after rows */
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+
+        .content {
+            background-color: white;
+            padding: 10px;
+        }
+
+        /* The "show" class is added to the filtered elements */
+
+        .show {
+            display: block;
+        }
+
+        /* Style the buttons */
+
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        .btn.active {
+            background-color: #666;
+            color: white;
+        }
+
+        .pagination a {
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+        .pagination a.active {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+         
+  
+    </style>
+</head>
+
+<body>
+
+
+    <div class="w3-container w3-card">
+
+        <div class="w3-panel w3-leftbar w3-sand w3-xxlarge w3-serif">
+            
+                
+            <center> <span class="branding w3-bar-item w3-mobile "><img src="images/logo.png" class="w3-padding" alt="Logo-ul meu" style="height:80px; width:160px"></span></center>
+            <div class="w3-card" id="flip" style="font-size: 16px; float: right; margin-top: 5px; max-width: 95%; height: auto;">
+                <p class="w3-tooltip ">Orar magazin:<br> <span class="w3-text "><em>Luni - Vineri: 08.00 - 17.00<br>Sambata: 08.00 - 12.00<br>Duminica , ne odihnim!</em></span></p>
+            </div>
+            <div class="w3-card" id="flip" style="font-size: 16px; float: left; margin-left:5px; margin-bottom: 10px; max-width: 95%;
+            height: auto;">
+                <p class="w3-tooltip ">Punct de lucru:<br> <span class="w3-text "><em>Str. Aristide Demetriade<br>Nr. 1-5(langa Fan Curier)</em></span></p>
+            </div>
+            <div class="w3-left-align" style="font-size:19px; text-shadow:1px 1px 0 red; margin: auto; max-width: 100%; height: auto;">
+                <center>
+                    <p><i>"Depozit de pal si accesorii mobilier. "</i></p>
+                </center>
+
+            </div>
+        </div>
+
+        <span class="w3-right w3-mobile " style="padding-bottom: 15px">
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hover-red " style="background-color: #666 ">Acasa</a>
+        <a href="produse.html" class="w3-bar-item w3-button w3-mobile w3-hover-red ">Produsele noastre</a>
+        <a href="descarcari.html" class="w3-bar-item w3-button w3-mobile w3-hover-red ">Descarcari</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-hover-red ">Contact</a>
+        </span>
+    </div>
+
+
+    <!-- Page content --><center>
+    <div class="w3-content " style="max-width:800px; margin-top: 50px; ">
+        <img class="mySlides w3-animate-fading " src="images/festool/festool.jpg " style="width:50%; ">
+        <img class="mySlides w3-animate-fading " src="images/pal/pal/circular.jpg " style="width:50% ">
+        <img class="mySlides w3-animate-fading " src="images/accesorii/glisiera/tandem/tandembox.jpg " style="width:50% ">
+        <img class="mySlides w3-animate-fading " src="images/pal/mdf/mdf.jpg" style="width: 50% ">
+    </div>
+</center>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides ");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none ";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block ";
+            setTimeout(carousel, 8000);
+        }
+
+    </script>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-64 ">
+
+
+
+
+
+    </footer>
+
+
+</body>
+
+</html>
